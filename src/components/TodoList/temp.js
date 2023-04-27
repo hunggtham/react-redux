@@ -50,3 +50,5 @@ incrementCreator(10);
 //sử dụng function này để : nhận vào action(object) : giống như bắn đi 1 action từ phía UI:
 //bắn dữ liệu từ action vào store, reducer trong store nhân được dữ liệu này( currenstate, action thực hiện từ dispath)
 
+
+//https://youtu.be/g_K1w8e0lLo?t=2250
