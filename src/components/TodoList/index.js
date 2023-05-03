@@ -1,11 +1,11 @@
 import { Col, Row, Input, Button, Select, Tag } from 'antd';
 import Todo from '../Todo';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodo } from '../Redux/actions';
+// import { addTodo } from '../Redux/actions';
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { todosRemainingSelector } from '../Redux/selectors';
-
+import todosSlice from './todosSlice';
 
 export default function TodoList() {
 
@@ -18,13 +18,15 @@ export default function TodoList() {
   // console.log({ todoList, searchText });
 
   // const [completed, setCompleted] = useState(false);
+
   const handleAddButtonClick = () => {
-    dispath(addTodo({
-      id: uuidv4(),
-      name: todoName,
-      priority: priority,
-      completed: false,
-    }))
+    dispath(
+      todosSlice.actions.addTodo({
+        id: uuidv4(),
+        name: todoName,
+        priority: priority,
+        completed: false,
+      }))
     setTodoName('');
     setPriority('Medium');
   }
