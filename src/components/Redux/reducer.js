@@ -1,4 +1,15 @@
-
+// const initValue = {
+//     filters: {
+//         search: '',
+//         status: 'All',
+//         priority: []
+//     },
+//     todoList: [
+//         { id: 1, name: 'Learn React', completed: false, priority: 'High' },
+//         { id: 2, name: 'Learn Nodejs', completed: false, priority: 'Medium' },
+//         { id: 3, name: 'Eat', completed: true, priority: 'Low' },
+//     ]
+// }
 // const rootReducer = (state = initValue, action) => {
 
 //     /**
@@ -46,9 +57,13 @@ const initValue = {
     filters: {
         search: '',
         status: 'All',
-        priority: []
+        priorities: []
     },
-    todoList: []
+    todoList: [
+        { id: 1, name: 'Learn React', completed: false, priority: 'High' },
+        { id: 2, name: 'Learn Nodejs', completed: false, priority: 'Medium' },
+        { id: 3, name: 'Eat', completed: true, priority: 'Low' },
+    ]
 }
 
 const rootReducer = (state = initValue, action) => {
